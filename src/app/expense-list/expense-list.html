@@ -1,1 +1,22 @@
-<p>expense-list works!</p>
+<ul>
+    @for (expense of expenses; track expense.id) {
+    <li style="margin: 5px;">
+     <span style="border: 2px white solid;">
+        {{expense.category}}
+     </span>
+
+     <span style="border: 2px white solid;">
+        {{expense.store_name}}
+
+     </span>
+     <span style="border: 2px white solid;">
+        {{expense.payment_type}}
+
+     </span>
+     <span style="border: 2px white solid;">
+        {{expense.price}}
+     </span>
+    </li>
+}
+</ul>
+

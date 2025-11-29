@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "price": 1250.50,
+    "category": "Продукти",
+    "date": "2023-11-20",
+    "payment_type": "Картка",
+    "store_name": "Сільпо"
+  },
+  {
+    "id": 2,
+    "price": 65.00,
+    "category": "Кафе та ресторани",
+    "date": "2023-11-21",
+    "payment_type": "Готівка",
+    "store_name": "Aroma Kava"
+  },
+  {
+    "id": 3,
+    "price": 2400.00,
+    "category": "Одяг",
+    "date": "2023-11-22",
+    "payment_type": "Картка",
+    "store_name": "Zara"
+  },
+  {
+    "id": 4,
+    "price": 350.00,
+    "category": "Транспорт",
+    "date": "2023-11-23",
+    "payment_type": "Картка",
+    "store_name": "OKKO"
+  },
+  {
+    "id": 5,
+    "price": 45.00,
+    "category": "Розваги",
+    "date": "2023-11-24",
+    "payment_type": "Готівка",
+    "store_name": "Кінотеатр Multiplex"
+  },
+  {
+    "id": 6,
+    "price": 899.00,
+    "category": "Дім",
+    "date": "2023-11-25",
+    "payment_type": "Картка",
+    "store_name": "Епіцентр"
+  }
+]
