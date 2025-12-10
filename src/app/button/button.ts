@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './button.css',
 })
 export class Button {
-
+  title = 'app-button';
+  addExpense() {
+    console.log('Add expense button clicked');
+  }
 }
