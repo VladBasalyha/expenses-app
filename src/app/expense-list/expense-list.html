@@ -14,7 +14,11 @@
     <span style="border: 2px white solid">
       {{ expense.price }}
     </span>
+    <span style="border: 2px white solid">
+      {{ expense.date }}
+    </span>
   </li>
   }
 </ul>
-<app-button></app-button>
+
+<button (click)="addExpense()">Add Expense</button>
