@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-new-expense-form',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './new-expense-form.html',
   styleUrl: './new-expense-form.css',
 })
@@ -15,4 +15,9 @@ export class NewExpenseForm {
     storeName: new FormControl(''),
     paymentType: new FormControl(''),
   });
+
+  @Output() expenseAdded = new EventEmitter<any>();
+  showFormValues() {
+    console.log(this.newPriceForm.value);
+  }
 }

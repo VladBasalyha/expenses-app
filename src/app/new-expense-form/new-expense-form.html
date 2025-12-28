@@ -1,14 +1,14 @@
-<form action="">
+<form [formGroup]="newPriceForm">
   <label for="price">
     Price:
-    <br />
-    <input type="number" />
+    <input formControlName="price" type="number" />
   </label>
   <br />
+
   <label for="category">
     Category:
     <br />
-    <select>
+    <select formControlName="category">
       <option value="food">Food</option>
       <option value="transportation">Transportation</option>
       <option value="utilities">Utilities</option>
@@ -20,21 +20,22 @@
     <br />
     Date:
     <br />
-    <input type="date" />
+    <input formControlName="date" type="date" />
   </label>
   <br />
   <label for="store_name">
     Store Name:
-    <input type="text" />
+    <input formControlName="storeName" type="text" />
   </label>
   <br />
   <label for="payment_type">
     Payment Type:
     <br />
-    <select>
+    <select formControlName="paymentType">
       <option value="credit_card">Credit Card</option>
       <option value="cash">Cash</option>
     </select></label
   >
   <br />
 </form>
+<button (click)="showFormValues()">Add Expense</button>
