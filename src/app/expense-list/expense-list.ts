@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import expenses from '../mock/expenses.json';
 
 @Component({
   selector: 'app-expense-list',
@@ -8,5 +7,5 @@ import expenses from '../mock/expenses.json';
 })
 export class ExpenseList {
   title = 'app-expense-list';
-  expenses = [...expenses];
+  expenses = [];
 }
