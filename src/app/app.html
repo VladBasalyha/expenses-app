@@ -173,8 +173,8 @@
 
 <main class="main">
   <div class="content">
-    <app-expense-list></app-expense-list>
-    <app-new-expense-form></app-new-expense-form>
+    <app-expense-list [expenses]="myExpenses"></app-expense-list>
+    <app-new-expense-form (expenseAdded)="newExpenseHandler($event)"></app-new-expense-form>
   </div>
 </main>
 

@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { ExpenseList } from './expense-list/expense-list';
 import { NewExpenseForm } from './new-expense-form/new-expense-form';
 import expenses from './mock/expenses.json';
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, ExpenseList, NewExpenseForm],
@@ -10,6 +11,9 @@ import expenses from './mock/expenses.json';
   styleUrl: './app.css',
 })
 export class App {
+  myExpenses = [...expenses];
+  newExpenseHandler(newExpense: any) {
+    this.myExpenses = [...this.myExpenses, newExpense];
+  }
   title = signal('Expenses list');
-  expenses = [...expenses];
 }

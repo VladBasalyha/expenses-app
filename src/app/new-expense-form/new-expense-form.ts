@@ -8,7 +8,10 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './new-expense-form.css',
 })
 export class NewExpenseForm {
+  @Output() expenseAdded = new EventEmitter<any>();
+
   newPriceForm = new FormGroup({
+    id: new FormControl(Math.random().toString(36).substring(2)),
     price: new FormControl(''),
     category: new FormControl(''),
     date: new FormControl(''),
@@ -16,8 +19,10 @@ export class NewExpenseForm {
     paymentType: new FormControl(''),
   });
 
-  @Output() expenseAdded = new EventEmitter<any>();
-  showFormValues() {
-    console.log(this.newPriceForm.value);
+  addExpense() {
+    if (this.newPriceForm.valid) {
+      this.expenseAdded.emit(this.newPriceForm.value);
+      this.newPriceForm.reset();
+    }
   }
 }
